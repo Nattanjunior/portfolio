@@ -1,0 +1,129 @@
+:root{
+ --font-poppins:  "Poppins", sans-serif;
+ --font-inter: "Inter", sans-serif;
+}
+body{
+ background-color: #000000;
+ height:100vh;
+ overflow-x: hidden;
+}
+
+header{
+ display: flex;
+ justify-content: space-around;
+ margin-top: 2rem;
+ margin-bottom: 11.7rem;
+}
+
+ header .logo{
+ display: flex;
+ gap: 1.5rem;
+ font-size:0.9rem;
+ color: #ffffff;
+ font-family:var(--font-poppins);
+}
+
+header .logo > p{
+ height:4rem;
+ display:flex;
+ flex-direction: column;
+ width: 10.2rem;
+ text-align: end;
+}
+header .logo strong{
+ font-size:2.2rem;
+ margin-bottom: -0.5rem;
+}
+
+nav{
+ display: flex;
+ flex-direction: row;
+ gap:1.4rem
+}
+
+nav button{
+ width: 9.6rem;
+ height: 3.5rem;
+ background-color: transparent;
+ border:1px solid #fff;
+ border-radius:0.88rem;
+ transition: ease-in-out 0.5s;
+ font-family: var(--font-poppins);
+}
+nav button:hover{
+ background-color: #392de9;
+ cursor: pointer;
+}
+nav button a{
+ text-decoration: none;
+ color: #fff;
+}
+
+main{
+ margin: auto;
+ width: 70rem;
+}
+
+main .image-fundo{
+ position: absolute;
+ z-index: -99;
+ left: 7.7rem;
+}
+
+main .apresentacao{
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+main .apresentacao div{
+ width:23.1rem;
+ height:23.1rem;
+ border-radius:50%;
+ overflow: hidden;
+ background-color: #1A1A1A;
+ margin-bottom:3.6rem;
+}
+
+main .apresentacao h1,h2{
+ font-family: var(--font-poppins);
+ color: #fff;
+}
+
+main .apresentacao h1{
+ font-size: 6.3rem;
+ margin-bottom: -2rem;
+}
+
+main .apresentacao h2{
+ font-size: 3.3rem;
+ margin-bottom: 2.1rem;
+ background-image:linear-gradient(to right, #9C83FF, #FF9051);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ color: black;
+}
+
+main .apresentacao p{
+ font-size:1.6rem;
+ text-align: center;
+ font-family: var(--font-poppins);
+ margin-bottom: 3.4rem;
+ color: #ffffff;
+}
+
+main .apresentacao button{
+ width:18.5rem;
+ height: 4.5rem;
+ border-radius:7.5rem;
+ outline: none;
+ border: 1px solid #585858;
+ background-color: #000000;
+ color:#ffffff;
+ font-size: 1.5rem;
+ cursor:pointer;
+}
+
