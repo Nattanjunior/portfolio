@@ -127,3 +127,47 @@ main .apresentacao button{
  cursor:pointer;
 }
 
+main .handlemodal{
+ display: none;
+ position: absolute;
+ top: 80%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ z-index: 1000;
+}
+
+main section{
+ margin-top: 10.5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+main .sobre-mim{
+ color: #fff;
+ text-align: center;
+ font-family: var(--font-inter);
+}
+
+main .sobre-mim h1{
+ font-size: 4.5rem;
+}
+
+main .sobre-mim h2{
+ margin-bottom: 2.7rem;
+ background-image:linear-gradient(to right, #9C83FF, #FF9051);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ color: black;
+}
+
+main .sobre-mim p{
+ font-size: 1.7rem;
+ margin-bottom: 2rem;
+}
+
+main .experiencia{
+ 
+}
