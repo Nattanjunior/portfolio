@@ -13,7 +13,7 @@ export default function Home(){
  const MostrarModal = ()=>{
    myelementRef.current.style.position = 'absolute';
    myelementRef.current.style.display = 'block';
-   document.body.style.filter = 'blur(15px)';
+   
 }
 
 
@@ -61,18 +61,23 @@ export default function Home(){
             <section className='experiencia'>
                 <h1>EXPERIÊNCIA</h1>
                 <h2>E X P L O R E  N O W</h2>
-                <div>
-                    <div>
-                     <h1></h1>
-                     <p></p>
-                    </div>
+                <div className='div-one'>
+                    <h1><strong>Desenvolvedor</strong> web/mobile</h1>
+                    <p>JANEIRO 2024 - MOMENTO, MACEIÓ-AL</p>
                 </div>
-                <p></p>
+                <p>Atualmente, estou trabalhando como Freelancer, como desenvolvedor React.js Com pouco mais de 1 ano de experiência, tenho uma base sólida na criação de aplicativos móveis e web dinâmicos e responsivos.</p>
+                <div className='div-two'>
+                 <span>React Native</span>
+                 <span>React Js</span>
+                 <span>JavaScript</span>
+                 <span>TypeScript</span>
+                </div>
+               
 
             </section>
 
 
-            <section>
+            <section className='projetos'>
                 <h1></h1>
                 <h2>E X P L O R E  N O W</h2>
 
