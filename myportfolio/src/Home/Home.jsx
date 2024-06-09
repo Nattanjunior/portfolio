@@ -33,7 +33,7 @@ export default function Home(){
                 <div><img src={imageMe} alt="Minha Imagem" /></div>
                 <h1>Nataniel Junior!</h1>
                 <h2>Software Engineer</h2>
-                <p>Desenvolvedor Full-Stack apaixonado com foco no desenvolvimento Mobile, dedicado à criação de aplicativos móveis elegantes e fáceis de usar. Com experiência em desenvolvimento Web.</p>
+                <p>Desenvolvedor Full-Stack apaixonado com foco no desenvolvimento Mobile, dedicado à criação de aplicativos móveis elegantes e fáceis de usar, com experiência em desenvolvimento Web.</p>
                 <button> <a href="#contacts">Contato</a></button>
             </section>
 
@@ -54,7 +54,7 @@ export default function Home(){
                     <h1><strong>Desenvolvedor</strong> web/mobile</h1>
                     <p>JANEIRO 2024 - MOMENTO, MACEIÓ-AL</p>
                 </div>
-                <p>Atualmente, estou trabalhando como Freelancer, como desenvolvedor React.js Com pouco mais de 1 ano de experiência, tenho uma base sólida na criação de aplicativos móveis e web dinâmicos e responsivos.</p>
+                <p>Atualmente, estou trabalhando como Freelancer, como desenvolvedor React.js com pouco mais de 1 ano de experiência, tenho uma base sólida na criação de aplicativos móveis e web dinâmicos e responsivos.</p>
                 <div className='div-two'>
                  <span>React Native</span>
                  <span>React Js</span>
