@@ -1,24 +1,13 @@
-import React, { useState ,useRef} from 'react'
 import './Home.css'
 import logo from '../assets/Logo.svg' 
 import Imagefundo from '../assets/Background-Pattern.svg'
 import imageMe from '../assets/Image-me.svg'
-import Modal from '../Components/Modal'
 import Imageproject1 from '../assets/download-image-rocketflix.png'
 import Imageproject2 from '../assets/download-image-twitter.png'
 
 
 export default function Home(){
- const myelementRef = useRef()
- const [handleModal, setHandleModal] = useState(true)
-
- const MostrarModal = ()=>{
-   myelementRef.current.style.position = 'absolute';
-   myelementRef.current.style.display = 'block';
-   
-}
-
-
+ 
     return(
         <>
         <header>
@@ -27,9 +16,9 @@ export default function Home(){
                 <p> <strong>Nataniel</strong> J u n i o r </p>
             </div>
             <nav>
-                <button><a href="">Sobre mim</a></button>
-                <button><a href="">Experiência</a></button>
-                <button><a href="">Projetos</a></button>
+                <button><a href="#About-me">Sobre mim</a></button>
+                <button><a href="#experience">Experiência</a></button>
+                <button><a href="#projects">Projetos</a></button>
             </nav>
         </header>
 
@@ -38,21 +27,19 @@ export default function Home(){
                 <img src={Imagefundo} alt="" />
             </div>
 
-            <div className ='handlemodal' ref={myelementRef}>
-                <Modal/>
-            </div>
+            
             
             <section className='apresentacao'>
                 <div><img src={imageMe} alt="Minha Imagem" /></div>
                 <h1>Nataniel Junior!</h1>
                 <h2>Software Engineer</h2>
                 <p>Desenvolvedor Full-Stack apaixonado com foco no desenvolvimento Mobile, dedicado à criação de aplicativos móveis elegantes e fáceis de usar. Com experiência em desenvolvimento Web.</p>
-                <button onClick={MostrarModal}>Contato</button>
+                <button> <a href="#contacts">Contato</a></button>
             </section>
 
 
-            <section className='sobre-mim'>
-             <h1>SOBRE MIM</h1>
+            <section className='sobre-mim' aria-labelledby="Abou-me">
+             <h1 id='About-me'>SOBRE MIM</h1>
              <h2>E X P L O R E  N O W</h2>
              <p>Como um engenheiro de software apaixonado, sou criativo e comunicativo. Atualmente imerso no mundo dinâmico do Desenvolvimento Mobile, minha experiência gira em torno do React Native, onde combino perfeitamente tecnologia com inovação.</p>
              <p>Com entusiasmo por criar soluções elegantes, navego no cenário em constante evolução do desenvolvimento de software. Minha jornada envolve traduzir conceitos em código, criar experiências de usuário perfeitas e ultrapassar constantemente os limites do que é possível</p>
@@ -60,8 +47,8 @@ export default function Home(){
             </section>
 
 
-            <section className='experiencia'>
-                <h1>EXPERIÊNCIA</h1>
+            <section className='experiencia'aria-labelledby="experience">
+                <h1 id='experience'>EXPERIÊNCIA</h1>
                 <h2>E X P L O R E  N O W</h2>
                 <div className='div-one'>
                     <h1><strong>Desenvolvedor</strong> web/mobile</h1>
@@ -79,8 +66,8 @@ export default function Home(){
             </section>
 
 
-            <section className='projetos'>
-                <h1>PROJETOS</h1>
+            <section className='projetos' aria-labelledby="projects">
+                <h1 id='projects'>PROJETOS</h1>
                 <h2>E X P L O R E  N O W</h2>
 
                 <div className='descricao-projetos'>
@@ -127,12 +114,16 @@ export default function Home(){
 
 
 
-        <footer>
-            <div>
+        <footer aria-label='contacts'>
+            <div id='contacts'>
              <a href="https://github.com/Nattanjunior" target='_blank'><ion-icon name="logo-github" color='#fff'></ion-icon></a>
              <a href="https://www.linkedin.com/in/nataniel-junior-20365a264/" target='_blank'><ion-icon name="logo-linkedin"></ion-icon></a>
              <a href="https://www.instagram.com/nattan_jr0/?next=%2F" target='-blank'><ion-icon name="logo-instagram"></ion-icon></a>
              
+            </div>
+            <div className='footer-contact' >
+               <p>fnatanieljunior@gmail.com</p> 
+               <p>(82) 99634-7121</p>
             </div>
         </footer>
         </>

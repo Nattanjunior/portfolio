@@ -130,14 +130,11 @@ main .apresentacao button{
  cursor:pointer;
 }
 
-main .handlemodal{
- display: none;
- position: absolute;
- top: 80%;
- left: 50%;
- transform: translate(-50%,-50%);
- z-index: 1000;
+main .apresentacao button a{
+ color: #FFFFFF;
+ text-decoration: none;
 }
+
 
 main section{
  margin-top: 10.5rem;
@@ -160,7 +157,6 @@ main .sobre-mim h1{
 }
 
 main .sobre-mim h2{
- width:14.6rem ;
  margin-bottom: 2.7rem;
  background-image:linear-gradient(to right, #9C83FF, #FF9051);
  background-clip: text;
@@ -230,7 +226,6 @@ main .experiencia h1{
 }
 
 main .experiencia h2{
- width: 14.6rem;
  margin-bottom: 5.5rem;
  background-image:linear-gradient(to right, #9C83FF, #FF9051);
  background-clip: text;
@@ -263,7 +258,6 @@ main .projetos h1{
 }
 
 main .projetos h2{
- width: 14.6rem;
  font-family:var(--font-inter) ;
  background-image:linear-gradient(to right, #9C83FF, #FF9051);
  background-clip: text;
@@ -333,9 +327,25 @@ main .projetos .descricao-projetos div div p::-webkit-scrollbar-thumb{
 footer {
  display: flex;
  justify-content: center;
+ align-items: center;
+ flex-direction: column;
  width: 45.5rem;
  height: 6.8rem;
  margin: 22.227rem auto;
+}
+
+footer .footer-contact{
+ width: 40rem;
+ font-family: var(--font-inter);
+ flex-direction: column;
+ align-items: center;
+ font-size: 1.6rem;
+ color: #fff;
+ margin-top: 2rem;
+}
+
+footer .footer-contact p{
+ margin-top: 2rem;
 }
 
 footer div{
@@ -357,7 +367,6 @@ footer div a{
 
 @media screen and (max-width:768px) {
  *{
-   box-sizing: border-box;
    position: relative;
  }
  
@@ -365,7 +374,7 @@ footer div a{
   overflow-x: hidden;
  }
  header{
- width: 50%;
+  width: 50%;
  }
 
  header nav{
@@ -373,43 +382,42 @@ footer div a{
  }
 
  main .image-fundo img{
-  height: 120rem;
+  display: none;
   position: absolute;
-  left: -25rem;
+  height: 0;
  }
 
- main .apresentacao div{
-  
-  left: -12rem;
+ main{
+  width: 100%;
  }
 
  main .apresentacao h1,
  main .apresentacao h2,
  main .sobre-mim h1,
  main .sobre-mim h2,
- main .experiencia h1
+ main .experiencia h1,
+ main .projetos h1,
+ main .projetos h2
  {
  font-size:3.6rem;
- position: relative;
- left: -13rem;
  }
 
+ main .apresentacao div{
+ left: 1rem;
+ }
  main .apresentacao h2{
  font-size: 2rem;
  margin-top: 1rem;
  }
 
  main .apresentacao p{
- position: relative;
- left: -13rem;
- width:55%;
+ width:90%;
  font-size: 1.5rem;
  text-align: justify;
  }
 
- main .apresentacao button{
- position: relative;
- left: -12rem;
+ main .sobre-mim{
+  margin-bottom: -3rem;
  }
 
  main .sobre-mim h2{
@@ -417,43 +425,78 @@ footer div a{
  }
 
  main .sobre-mim p{
- width: 55%;
- left: -13rem;
+ width: 90%;
  text-align: justify;
  }
 
+ main .experiencia{
+ margin-bottom: 0;
+ }
+
  main .experiencia h1{
- left: -11rem;
+ left: 3rem;
  }
 
  main .experiencia h2{
-  left: -12rem;
+  left: 1rem;
   font-size: 1.3rem;
  }
 
  main .experiencia .div-one{
- left:-3rem;
- width: 55%;
+  width: 90%;
  }
 
+ main .experiencia .div-one h1{
+  width: 85%;
+  left: -1rem;
+ }
  main .experiencia .div-one p{
   width: 60%;
   margin-top: 1rem;
-  left: -7rem;
+  left: 2rem;
   font-size: 1rem;
   text-align: center;
  }
 
  main .experiencia p{
-  width: 57%;
+  width: 90%;
   text-align: justify;
-  left: -13.3rem;
  }
 
+ main .experiencia .div-two{
+  flex-wrap: wrap;
+  width: 90%;
+ }
  main .experiencia .div-two span {
   width: 8rem;
   padding: 1rem;
   font-size:.8rem;
-  left: 2rem;
+  left: 0rem;
+ }
+
+ main .projetos h1{
+  left: 3rem;
+ }
+
+ main .projetos h2{
+  left: 1rem;
+  font-size: 1.3rem;
+ }
+
+ main .projetos .descricao-projetos{
+  margin-top: 2rem;
+  width: 90%;
+ }
+ 
+ footer{
+  width: 90%;
+ }
+
+ footer .footer-contact{
+  width: 90%;
+ }
+
+ footer .footer-contact p{
+  margin-top: 0;
  }
 }
