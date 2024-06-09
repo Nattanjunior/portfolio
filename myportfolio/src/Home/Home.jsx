@@ -4,6 +4,8 @@ import logo from '../assets/Logo.svg'
 import Imagefundo from '../assets/Background-Pattern.svg'
 import imageMe from '../assets/Image-me.svg'
 import Modal from '../Components/Modal'
+import Imageproject1 from '../assets/download-image-rocketflix.png'
+import Imageproject2 from '../assets/download-image-twitter.png'
 
 
 export default function Home(){
@@ -78,8 +80,47 @@ export default function Home(){
 
 
             <section className='projetos'>
-                <h1></h1>
+                <h1>PROJETOS</h1>
                 <h2>E X P L O R E  N O W</h2>
+
+                <div className='descricao-projetos'>
+                    <div>
+                        <a href="https://rocketflix-e5b2.vercel.app/" target='_blank'><img src={Imageproject1} alt="" /></a>
+                        <div>
+                         <h3>RocketFlix</h3>
+                         <p>Desenvolvi esse projeto de aplicação web utilizando React JS, Node.JS e Express.JS. Um aplicação que exibe informações de filmes de forma interativa, título, descrição do filme, avaliação, popularidade e imagem.</p>
+                        </div>
+                        
+                    </div>
+                        
+                    <div>
+                        <a href="https://app-twitter-1kf2.vercel.app/" target='_blank'><img src={Imageproject2} alt="" /></a>
+                        <div>
+                         <h3>Twitter</h3>
+                         <p>Uma réplica simples do Twitter feita em React. Possui um sidebar com links e funcionalidades básicas de twittar e responder a tweets de outras pessoas.</p>
+                        </div>
+                        
+                    </div>
+
+                    <div>
+                        <a href=""><img src="" alt="" /></a>
+                        <div>
+                         <h3>RocketFlix</h3>
+                         <p>afknvajfn</p>
+                        </div>
+                        
+                    </div>
+
+                    <div>
+                        <a href=""><img src={Imageproject1} alt="" /></a>
+                        
+                        <div>
+                         <h3>RocketFlix</h3>
+                         <p>afknvajfn</p>
+                        </div>
+                        
+                    </div>
+                </div>
 
             </section>
         </main>
@@ -87,7 +128,12 @@ export default function Home(){
 
 
         <footer>
-            
+            <div>
+             <a href="https://github.com/Nattanjunior" target='_blank'><ion-icon name="logo-github" color='#fff'></ion-icon></a>
+             <a href="https://www.linkedin.com/in/nataniel-junior-20365a264/" target='_blank'><ion-icon name="logo-linkedin"></ion-icon></a>
+             <a href="https://www.instagram.com/nattan_jr0/?next=%2F" target='-blank'><ion-icon name="logo-instagram"></ion-icon></a>
+             
+            </div>
         </footer>
         </>
     )

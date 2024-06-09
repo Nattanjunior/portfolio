@@ -1,6 +1,6 @@
 :root{
  --font-poppins:  "Poppins", sans-serif;
- --font-inter: "Inter", sans-serif;
+ --font-inter: "Inter", sans-serif; 
 }
 body{
  background-color: #000000;
@@ -93,11 +93,13 @@ main .apresentacao h1,h2{
 }
 
 main .apresentacao h1{
+ max-width: 54rem;
  font-size: 6.3rem;
  margin-bottom: -2rem;
 }
 
 main .apresentacao h2{
+ max-width: 31rem;
  font-size: 3.3rem;
  margin-bottom: 2.1rem;
  background-image:linear-gradient(to right, #9C83FF, #FF9051);
@@ -108,6 +110,7 @@ main .apresentacao h2{
 }
 
 main .apresentacao p{
+ width: 58.7rem;
  font-size:1.6rem;
  text-align: center;
  font-family: var(--font-poppins);
@@ -152,10 +155,12 @@ main .sobre-mim{
 }
 
 main .sobre-mim h1{
+ width: 26rem;
  font-size: 4.5rem;
 }
 
 main .sobre-mim h2{
+ width:14.6rem ;
  margin-bottom: 2.7rem;
  background-image:linear-gradient(to right, #9C83FF, #FF9051);
  background-clip: text;
@@ -165,12 +170,14 @@ main .sobre-mim h2{
 }
 
 main .sobre-mim p{
+ width: 70rem;
  font-size: 1.7rem;
  margin-bottom: 2rem;
 }
 
 main .experiencia {
  max-width: 70.3rem;
+ margin-bottom: 15.6rem;
 }
 main .experiencia .div-one{
  font-family: var(--font-inter);
@@ -194,15 +201,17 @@ main .experiencia .div-two{
 }
 
 main .experiencia .div-two span{
- background-color: transparent;
- border: 1px solid;
- border-image: linear-gradient(to right, #9C83FF, #FF9051) 1;
- display: flex;
+ background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box, linear-gradient(to right, #9C83FF, #FF9051) border-box;
+ border-radius: 50em;
+ border: 3px solid transparent;
  justify-content: center;
  align-items: center;
- 
- border-radius: 10rem;
- padding: 1rem;
+ font-size: 1.2em;
+ font-weight: bold;
+ text-decoration: none;
+ color: #fff;
+ padding: 0.5em 1.5em;
+ cursor: pointer;
 }
 
 main .experiencia div h1{
@@ -214,12 +223,14 @@ main .experiencia div p{
 }
 
 main .experiencia h1{
+ width: 28.5rem;
  font-size: 4.5rem;
  color: #fff;
  font-family: var(--font-inter);
 }
 
 main .experiencia h2{
+ width: 14.6rem;
  margin-bottom: 5.5rem;
  background-image:linear-gradient(to right, #9C83FF, #FF9051);
  background-clip: text;
@@ -229,6 +240,7 @@ main .experiencia h2{
 }
 
 main .experiencia p{
+ max-width: 70rem;
  color: #fff;
  font-size: 1.5rem;
  font-family: var(--font-inter);
@@ -239,6 +251,209 @@ main .experiencia span{
  color: #fff;
 }
 
-/* main .projetos{
+main .projetos{
+ font-family: var(--font-inter);
+ color: #fff;
+ max-width: 69.6rem;
+}
+
+main .projetos h1{
+ width: 23.4rem;
+ font-size: 4.5rem;
+}
+
+main .projetos h2{
+ width: 14.6rem;
+ font-family:var(--font-inter) ;
+ background-image:linear-gradient(to right, #9C83FF, #FF9051);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ color: black;
+}
+
+main .projetos .descricao-projetos{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ margin: 5.5rem 0 0 0 ;
+}
+
+main .projetos .descricao-projetos div{
+ width: 33.3rem;
+ height: 7.93rem;
+ display: flex;
+ align-items: center;
+ gap: 1.7rem;
+ padding: 0rem;
+ margin: 4rem 0 0 1rem;
+
+}
+
+main .projetos .descricao-projetos div img{
+ width: 12.6rem;
+ height: 7.93rem;
+ border-radius: .755rem;
+ object-fit: cover;
+}
+
+main .projetos .descricao-projetos div h3{
+ margin-bottom: -1.4rem;
+ font-size: 1.622rem;
+}
+
+main .projetos .descricao-projetos div p,
+main .projetos .descricao-projetos div h3{
+ width:19.0rem;
+}
+
+main .projetos .descricao-projetos div div{
+ display: flex;
+ flex-direction: column;
+ margin: 0;
+}
+
+main .projetos .descricao-projetos div div p{
+ overflow-x: hidden;
+ color: #878787;
+}
+
+main .projetos .descricao-projetos div div p::-webkit-scrollbar{
+ background-color: transparent;
+ width: 0.2rem;
+}
+
+main .projetos .descricao-projetos div div p::-webkit-scrollbar-thumb{
+ border-radius: 1rem;
+ background-color: #e9e6e357;
+}
+
+
+footer {
+ display: flex;
+ justify-content: center;
+ width: 45.5rem;
+ height: 6.8rem;
+ margin: 22.227rem auto;
+}
+
+footer div{
+ width: 17.45rem;
+ height: 2.51rem;
+ display: flex;
+ justify-content: space-between;
+}
+
+footer ion-icon {
+ font-size: 2.5rem;
+}
+
+footer div a{
+ text-decoration: none;
+ color: #FFFFFF;
+}
+
+
+@media screen and (max-width:768px) {
+ *{
+   box-sizing: border-box;
+   position: relative;
+ }
  
-} */
+ body{
+  overflow-x: hidden;
+ }
+ header{
+ width: 50%;
+ }
+
+ header nav{
+  display: none;
+ }
+
+ main .image-fundo img{
+  height: 120rem;
+  position: absolute;
+  left: -25rem;
+ }
+
+ main .apresentacao div{
+  
+  left: -12rem;
+ }
+
+ main .apresentacao h1,
+ main .apresentacao h2,
+ main .sobre-mim h1,
+ main .sobre-mim h2,
+ main .experiencia h1
+ {
+ font-size:3.6rem;
+ position: relative;
+ left: -13rem;
+ }
+
+ main .apresentacao h2{
+ font-size: 2rem;
+ margin-top: 1rem;
+ }
+
+ main .apresentacao p{
+ position: relative;
+ left: -13rem;
+ width:55%;
+ font-size: 1.5rem;
+ text-align: justify;
+ }
+
+ main .apresentacao button{
+ position: relative;
+ left: -12rem;
+ }
+
+ main .sobre-mim h2{
+  font-size: 1.3rem;
+ }
+
+ main .sobre-mim p{
+ width: 55%;
+ left: -13rem;
+ text-align: justify;
+ }
+
+ main .experiencia h1{
+ left: -11rem;
+ }
+
+ main .experiencia h2{
+  left: -12rem;
+  font-size: 1.3rem;
+ }
+
+ main .experiencia .div-one{
+ left:-3rem;
+ width: 55%;
+ }
+
+ main .experiencia .div-one p{
+  width: 60%;
+  margin-top: 1rem;
+  left: -7rem;
+  font-size: 1rem;
+  text-align: center;
+ }
+
+ main .experiencia p{
+  width: 57%;
+  text-align: justify;
+  left: -13.3rem;
+ }
+
+ main .experiencia .div-two span {
+  width: 8rem;
+  padding: 1rem;
+  font-size:.8rem;
+  left: 2rem;
+ }
+}
