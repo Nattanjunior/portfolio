@@ -447,13 +447,13 @@ footer div a{
  }
 
  main .experiencia .div-one h1{
-  width: 85%;
-  left: -1rem;
+  width: 70%;
+  left: 1rem;
  }
  main .experiencia .div-one p{
   width: 60%;
   margin-top: 1rem;
-  left: 2rem;
+  left: 1rem;
   font-size: 1rem;
   text-align: center;
  }
@@ -468,7 +468,7 @@ footer div a{
   width: 90%;
  }
  main .experiencia .div-two span {
-  width: 8rem;
+  width: 9rem;
   padding: 1rem;
   font-size:.8rem;
   left: 0rem;
