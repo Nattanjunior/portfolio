@@ -1,13 +1,11 @@
 import Link from 'next/link';
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Process', href: '#process' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Blog', href: '#blog' },
-  { name: 'Services', href: '#services' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Início', href: '#home' },
+  { name: 'Sobre', href: '#about' },
+  { name: 'Processo', href: '#process' },
+  { name: 'Portfólio', href: '#portfolio' },
+  { name: 'Contato', href: '#contact' },
 ];
 
 const socialLinks = [
@@ -17,22 +15,12 @@ const socialLinks = [
       <path d="M6 9H2V21H6V9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
-  ), href: 'https://linkedin.com/in/brooklyn', label: 'LinkedIn' },
+  ), href: 'https://www.linkedin.com/in/nattanjunior', label: 'LinkedIn' },
   { icon: (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M16 8V8.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
-  ), href: 'https://instagram.com/brooklyn', label: 'Instagram' },
-  { icon: (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M9.5 16C11.0913 16 12.5 14.5913 12.5 13C12.5 11.4087 11.0913 10 9.5 10C7.90872 10 6.5 11.4087 6.5 13C6.5 14.5913 7.90872 16 9.5 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M14.5 9C16.0913 9 17.5 7.59128 17.5 6C17.5 4.40872 16.0913 3 14.5 3C12.9087 3 11.5 4.40872 11.5 6C11.5 7.59128 12.9087 9 14.5 9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M14.5 21C16.0913 21 17.5 19.5913 17.5 18C17.5 16.4087 16.0913 15 14.5 15C12.9087 15 11.5 16.4087 11.5 18C11.5 19.5913 12.9087 21 14.5 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  ), href: 'https://dribbble.com/brooklyn', label: 'Dribbble' },
+  ), href: 'https://github.com/Nattanjunior', label: 'GitHub' },
 ];
 
 export function Footer() {
@@ -48,9 +36,9 @@ export function Footer() {
           <div className="mb-6 md:mb-0">
             <Link href="#home" className="flex items-center">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white mr-2">
-                <span className="text-lg font-bold">B</span>
+                <span className="text-lg font-bold">N</span>
               </div>
-              <span className="text-xl font-bold">Brooklyn</span>
+              <span className="text-xl font-bold">Nataniel Junior</span>
             </Link>
           </div>
           
@@ -83,7 +71,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Brooklyn Gilbert. All rights reserved.</p>
+          <p>© {currentYear} Nataniel Junior. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
