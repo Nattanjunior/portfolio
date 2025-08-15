@@ -31,20 +31,19 @@ export function ContactForm() {
     },
   });
 
-  async function onSubmit(values: ContactFormValues) {
+  function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send this data to your backend
-      console.log(values);
+      // Redirecionar para o WhatsApp com a mensagem
+      const message = `Nome: ${values.name}\nEmail: ${values.email}\nTelefone: ${values.phone}\nMensagem: ${values.message}`;
+      const whatsappUrl = `https://wa.me/5582996506043?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast.success('Message sent successfully! I will get back to you soon.');
+      toast.success('Redirecionando para o WhatsApp!');
       form.reset();
     } catch (error) {
-      toast.error('Something went wrong. Please try again.');
+      toast.error('Algo deu errado. Por favor, tente novamente.');
       console.error(error);
     } finally {
       setIsSubmitting(false);
@@ -60,10 +59,10 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nome</FormLabel>
                 <FormControl>
                 <Input 
-                  placeholder="Your name" 
+                  placeholder="Seu nome" 
                   {...field} 
                   className="bg-card backdrop-blur-sm border border-white/10 focus:border-primary/20 focus:ring-primary/10"
                 />
@@ -81,7 +80,7 @@ export function ContactForm() {
                 <FormControl>
                 <Input 
                   type="email" 
-                  placeholder="your.email@example.com" 
+                  placeholder="seu.email@exemplo.com" 
                   {...field} 
                   className="bg-card backdrop-blur-sm border border-white/10 focus:border-primary/20 focus:ring-primary/10"
                 />
@@ -97,10 +96,10 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone</FormLabel>
+              <FormLabel>Telefone</FormLabel>
               <FormControl>
                 <Input 
-                  placeholder="Your phone number" 
+                  placeholder="Seu número de telefone" 
                   {...field} 
                   className="bg-card backdrop-blur-sm border border-white/10 focus:border-primary/20 focus:ring-primary/10"
                 />
@@ -115,10 +114,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Mensagem</FormLabel>
               <FormControl>
                 <Textarea 
-                  placeholder="Your message" 
+                  placeholder="Sua mensagem" 
                   className="min-h-32 bg-card backdrop-blur-sm border border-white/10 focus:border-primary/20 focus:ring-primary/10" 
                   {...field} 
                 />
@@ -133,7 +132,7 @@ export function ContactForm() {
           disabled={isSubmitting}
           className="w-full bg-primary text-white hover:bg-primary/90"
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
         </Button>
       </form>
     </Form>
