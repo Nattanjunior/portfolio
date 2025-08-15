@@ -10,8 +10,8 @@ interface ProcessStepProps {
 const processSteps: ProcessStepProps[] = [
   {
     number: '01',
-    title: 'Discover',
-    description: 'I conduct research to understand your business goals, target audience, and market landscape.',
+    title: 'Descobrir',
+    description: 'Entendo as necessidades do cliente e os objetivos do negócio para criar soluções sob medida.',
     icon: (
       <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,8 +23,8 @@ const processSteps: ProcessStepProps[] = [
   },
   {
     number: '02',
-    title: 'Define',
-    description: 'I define the project scope, requirements, and create a strategic plan to achieve your objectives.',
+    title: 'Definir',
+    description: 'Defino o escopo do projeto, requisitos e métricas de sucesso para garantir alinhamento.',
     icon: (
       <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,8 +37,8 @@ const processSteps: ProcessStepProps[] = [
   },
   {
     number: '03',
-    title: 'Design',
-    description: 'I create wireframes, mockups, and prototypes to visualize the user interface and experience.',
+    title: 'Planejar',
+    description: 'Crio um planejamento detalhado para o desenvolvimento, garantindo performance e segurança.',
     icon: (
       <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,8 +53,8 @@ const processSteps: ProcessStepProps[] = [
   },
   {
     number: '04',
-    title: 'Develop',
-    description: 'I transform designs into functional products using the latest technologies and best practices.',
+    title: 'Desenvolver',
+    description: 'Implemento a solução com código limpo e eficiente, otimizando resultados e agregando valor ao negócio.',
     icon: (
       <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,9 +95,9 @@ export function ExperienceSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">How I Work</h2>
+          <h2 className="text-3xl font-bold mb-4">Como eu trabalho</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            My design process is structured to deliver exceptional results that meet your business objectives and user needs.
+            Meu processo de desenvolvimento é focado em entender as necessidades do cliente, criar soluções sob medida e garantir performance e segurança. Desde a análise inicial, passando pelo planejamento e desenvolvimento, até a entrega final, busco sempre otimizar resultados e agregar valor ao negócio.
           </p>
         </div>
         
