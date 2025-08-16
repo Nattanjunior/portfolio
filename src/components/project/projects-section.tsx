@@ -35,7 +35,7 @@ const projects: ProjectProps[] = [
     githubUrl: 'https://github.com/Nattanjunior/ApoiaDev',
   },
   {
-    title: 'Sistema de Autenticação NestJS',
+    title: 'Sistema de Autenticação',
     description: 'Sistema completo de autenticação e autorização construído com NestJS, implementando JWT, OAuth 2.0 e controle de acesso baseado em roles (RBAC) com CASL. Este projeto demonstra uma implementação robusta de autenticação moderna, integrando múltiplos provedores de identidade e um sistema granular de permissões. Ideal para aplicações que necessitam de controle de acesso sofisticado e flexível.',
     imageSrc: '',
     tags: ['Node.js', 'TypeScript', 'Nest.js', 'JWT', 'Passport.js', 'OAuth 2.0', 'RBAC', 'CASL'],
@@ -58,14 +58,14 @@ export function ProjectsSection() {
     setActiveProject(activeProject === index ? null : index);
   };
   return (
-    <section id="portfolio" className="py-20 relative overflow-hidden">
+    <section id="project" className="py-20 relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/4 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
       <div className="absolute bottom-0 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Portfólio</h2>
+          <h2 className="text-3xl font-bold mb-4">Projetos</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Cada projeto é uma peça única de desenvolvimento 🧩
           </p>
@@ -121,7 +121,7 @@ export function ProjectsSection() {
                           ))}
                         </div>
                         <div className="description-container">
-                          <div className="overflow-auto">
+                          <div className="overflow-auto custom-scrollbar">
                             <p className={`text-muted-foreground text-sm mb-4 ${activeProject === index ? '' : 'line-clamp-3'}`}>
                               {project.description}
                             </p>
