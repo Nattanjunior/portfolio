@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 const navItems = [
   { name: 'Início', href: '#home' },
   { name: 'Sobre', href: '#about' },
-  { name: 'Processo', href: '#process' },
-  { name: 'Portfólio', href: '#portfolio' },
+  { name: 'Tecnologias', href: '#tech' },
+  { name: 'Projetos', href: '#project' },
 ];
 
 export function Header() {
