@@ -54,7 +54,12 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-lg shadow-primary/20">
               <div className="w-full h-full bg-primary/20 flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">N.A</span>
+                <Image 
+                  src="/profile.png"
+                  alt="Nataniel Junior"
+                  width={200}
+                  height={200}
+                />
               </div>
             </div>
           </div>

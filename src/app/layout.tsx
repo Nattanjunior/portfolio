@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Natalia | Software Engineer",
+  title: "Nataniel Junior | Software Engineer",
   description: "Software Engineer specializing in building exceptional digital experiences with modern web technologies.",
-  keywords: ["software engineer", "web developer", "react developer", "next.js developer", "frontend developer", "UI/UX designer"],
+  keywords: ["software engineer", "web developer", "react developer", "next.js developer", "frontend developer", "full stack developer", "node developer", "desenvolvedor", "backend developer"],
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth dark">
+    <html lang="pt-br" className="scroll-smooth dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
