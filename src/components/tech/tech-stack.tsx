@@ -20,8 +20,8 @@ const techIcons: TechIconProps[] = [
   { name: 'PostgreSQL', icon: 'https://skillicons.dev/icons?i=postgres' },
   { name: 'MongoDB', icon: 'https://skillicons.dev/icons?i=mongodb' },
   { name: 'Redis', icon: 'https://skillicons.dev/icons?i=redis' },
-  { name: 'AI', icon: 'https://skillicons.dev/icons?i=ai' },
   { name: 'Docker', icon: 'https://skillicons.dev/icons?i=docker' },
+  { name: 'AI', icon: 'https://skillicons.dev/icons?i=ai' },
   { name: 'JavaScript', icon: 'https://skillicons.dev/icons?i=js' },
   { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
   { name: 'Jest', icon: 'https://skillicons.dev/icons?i=jest' },
@@ -68,7 +68,7 @@ export function TechStack() {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="py-12 relative overflow-hidden">
+    <div id="tech" ref={containerRef} className="py-12 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10 mb-8">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold mb-2">Minhas Tecnologias</h3>
