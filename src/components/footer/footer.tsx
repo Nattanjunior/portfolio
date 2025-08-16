@@ -3,8 +3,8 @@ import Link from 'next/link';
 const navItems = [
   { name: 'Início', href: '#home' },
   { name: 'Sobre', href: '#about' },
-  { name: 'Processo', href: '#process' },
-  { name: 'Portfólio', href: '#portfolio' },
+  { name: 'Tecnologias', href: '#tech' },
+  { name: 'Projetos', href: '#project' },
   { name: 'Contato', href: '#contact' },
 ];
 
