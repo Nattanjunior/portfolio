@@ -10,6 +10,8 @@ interface TechIconProps {
   icon: string;
 }
 
+
+
 const techIcons: TechIconProps[] = [
   { name: 'Node.js', icon: 'https://skillicons.dev/icons?i=nodejs' },
   { name: 'TypeScript', icon: 'https://skillicons.dev/icons?i=ts' },
@@ -71,7 +73,7 @@ export function TechStack() {
     <div id="tech" ref={containerRef} className="py-12 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10 mb-8">
         <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold mb-2">Minhas Tecnologias</h3>
+          <h3 className="text-2xl font-bold mb-2">Tecnologias</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Ferramentas e linguagens que utilizo para criar soluções modernas e eficientes
           </p>
