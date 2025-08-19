@@ -61,7 +61,7 @@ export function ProjectsSection() {
     setActiveProject(activeProject === index ? null : index);
   };
   return (
-    <section id="project" className="py-20 relative overflow-hidden">
+    <section id="project" className="py-20 relative overflow-hidden font-poppins" data-aos="fade-up">
       {/* Background gradients */}
       <div className="absolute top-1/4 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
       <div className="absolute bottom-0 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
