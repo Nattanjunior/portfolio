@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nataniel Junior | Software Engineer",
+  title: "Nattan Junior | Software Engineer",
   description: "Software Engineer specializing in building exceptional digital experiences with modern web technologies.",
   keywords: ["software engineer", "web developer", "react developer", "next.js developer", "frontend developer", "full stack developer", "node developer", "desenvolvedor", "backend developer"],
 };
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="scroll-smooth dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-preahvihear`}
       >
         <ToasterProvider />
         {children}
