@@ -6,13 +6,16 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Info } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, EffectCards } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
+import 'swiper/css/autoplay';
+
+// Import project slider styles
 import './project-slider.css';
 
 export interface ProjectProps {
@@ -30,12 +33,12 @@ const projects: ProjectProps[] = [
     title: 'ApoiaDev',
     description: 'ApoiaDev é uma plataforma moderna para criadores de conteúdo receberem doações e apoios de sua comunidade de forma simples, segura e integrada ao Stripe. Ideal para desenvolvedores, streamers, educadores e produtores de conteúdo que desejam monetizar seu trabalho online e criar uma conexão direta com seus apoiadores.',
     imageSrc: '/apoiadev.png',
-    tags: ['Next.js', 'Node.js', 'TypeScript', 'Stripe'],
+    tags: ['Next.js', 'Node.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'Docker'],
     liveUrl: 'https://apoia-devv.vercel.app',
     githubUrl: 'https://github.com/Nattanjunior/ApoiaDev',
   },
   {
-    title: 'Sistema de Autenticação',
+    title: 'Sistema de Autenticação e Autorização',
     description: 'Sistema completo de autenticação e autorização construído com NestJS, implementando JWT, OAuth 2.0 e controle de acesso baseado em roles (RBAC) com CASL. Este projeto demonstra uma implementação robusta de autenticação moderna, integrando múltiplos provedores de identidade e um sistema granular de permissões. Ideal para aplicações que necessitam de controle de acesso sofisticado e flexível.',
     imageSrc: '',
     tags: ['Node.js', 'TypeScript', 'Nest.js', 'JWT', 'Passport.js', 'OAuth 2.0', 'RBAC', 'CASL'],
@@ -43,10 +46,10 @@ const projects: ProjectProps[] = [
     githubUrl: 'https://github.com/Nattanjunior/nestjs-auth',
   },
   {
-    title: 'Notificações Service',
+    title: 'Sistema de Notificações',
     description: 'Este é um microsserviço de notificações construído com NestJS, Prisma e PostgreSQL. O objetivo é fornecer uma API robusta e escalável para criar, gerenciar e consultar notificações.',
     imageSrc: '',
-    tags: ['Node.js', 'TypeScript', 'Nest.js', 'Prisma', 'PostgreSQL', 'Jest '],
+    tags: ['Node.js', 'TypeScript', 'Nest.js', 'Prisma', 'PostgreSQL', 'Jest ', 'Docker'],
     liveUrl: '',
     githubUrl: 'https://github.com/Nattanjunior/notifications-service',
   },
@@ -65,8 +68,8 @@ export function ProjectsSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Projetos</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-4 font-poppins">Projetos</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-Preahvihear">
             Cada projeto é uma peça única de desenvolvimento 🧩
           </p>
         </div>
@@ -100,6 +103,8 @@ export function ProjectsSection() {
                               className='w-full h-full object-fit'
                               width={600}
                               height={300}
+                              quality={100}
+                              priority={index === 0}
                             />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center">
