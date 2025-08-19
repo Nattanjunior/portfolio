@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Preahvihear, Poppins} from "next/font/google";
 import "./globals.css";
 
 import { ToasterProvider } from "@/components/providers/toaster-provider";
+import { AOSProvider } from "@/components/providers/AOSprovider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,10 +14,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const preahvihear = Preahvihear({
+  subsets: ["latin"],
+  weight: ["400"], 
+  variable: "--font-preahvihear",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], 
+  variable: "--font-poppins",
+});
+
 export const metadata: Metadata = {
-  title: "Nattan Junior | Software Engineer",
-  description: "Software Engineer specializing in building exceptional digital experiences with modern web technologies.",
-  keywords: ["software engineer", "web developer", "react developer", "next.js developer", "frontend developer", "full stack developer", "node developer", "desenvolvedor", "backend developer"],
+  title: "Nattan Junior | Engenheiro de Software",
+  description: "Engenheiro de software especializado em criar experiências digitais excepcionais com tecnologias web modernas.",
+  keywords: ["engenheiro de software", "desenvolvedor web", "desenvolvedor react", "desenvolvedor next.js", "desenvolvedor frontend", "desenvolvedor full stack", "desenvolvedor node", "desenvolvedor", "desenvolvedor backend"],
+  openGraph: {
+    title: "Nattan Junior | Engenheiro de Software",
+    description: "Engenheiro de software especializado em criar experiências digitais excepcionais com tecnologias web modernas.",
+    images: [
+      {
+        url: "https://nattan-junior.vercel.app/logo.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -25,12 +49,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className="scroll-smooth dark">
+    <html lang="pt-br" className={`scroll-smooth dark ${preahvihear.variable} ${poppins.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-preahvihear`}
+        className={`font-preahvihear antialiased `}
       >
         <ToasterProvider />
-        {children}
+        <AOSProvider>
+          {children}
+        </AOSProvider >
       </body>
     </html>
   );
