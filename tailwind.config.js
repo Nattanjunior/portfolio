@@ -17,8 +17,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        preahvihear: ["Preahvihear", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        preahvihear: ["var(--font-preahvihear)"],
+        poppins: ["var(--font-poppins)"],
       },
       colors: {
         border: "var(--border)",
