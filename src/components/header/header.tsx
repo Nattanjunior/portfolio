@@ -30,11 +30,11 @@ export function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="#home" className="flex items-center">
           <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-2">
-            <span className="text-white font-bold">N.A</span>
+            <span className="text-white font-bold">N</span>
           </div>
-          <span className="text-xl font-bold text-foreground">Nataniel Junior</span>
+          <span className="text-xl font-bold text-foreground font-Preahvihear">Nattan Junior</span>
         </Link>
-        
+          
         {/* Desktop Navigation - visível apenas em desktop */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (

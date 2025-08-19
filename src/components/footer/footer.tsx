@@ -38,7 +38,7 @@ export function Footer() {
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white mr-2">
                 <span className="text-lg font-bold">N</span>
               </div>
-              <span className="text-xl font-bold">Nataniel Junior</span>
+              <span className="text-xl font-bold font-preahvihear">Nattan Junior</span>
             </Link>
           </div>
           
@@ -71,7 +71,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Nataniel Junior. Todos os direitos reservados.</p>
+          <p className="font-preahvihear">© {currentYear} Nattan Junior. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
