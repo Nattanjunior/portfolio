@@ -19,7 +19,6 @@ export function HeroSection() {
               <p className="text-primary font-medium">Olá, eu sou</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
                 <TypingAnimation
-                  className="font-preahvihear"
                   duration={100}
                   delay={0}
                   startOnView={true}
