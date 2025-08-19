@@ -36,7 +36,7 @@ export function ContactForm() {
     
     try {
       // Redirecionar para o WhatsApp com a mensagem
-      const message = `Nome: ${values.name}\nEmail: ${values.email}\nTelefone: ${values.phone}\nMensagem: ${values.message}`;
+      const message = `${values.message}`;
       const whatsappUrl = `https://wa.me/5582996506043?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
       
