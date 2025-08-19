@@ -70,7 +70,7 @@ export function TechStack() {
   }, { scope: containerRef });
 
   return (
-    <div id="tech" ref={containerRef} className="py-12 relative overflow-hidden">
+    <div id="tech" ref={containerRef} className="py-12 relative overflow-hidden font-preahvihear" data-aos="fade-up">
       <div className="container mx-auto px-4 relative z-10 mb-8">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold mb-2">Tecnologias</h3>
