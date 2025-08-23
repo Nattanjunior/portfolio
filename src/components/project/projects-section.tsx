@@ -31,7 +31,7 @@ export interface ProjectProps {
 const projects: ProjectProps[] = [
   {
     title: 'Givoo',
-    description: 'Givoo é uma plataforma moderna para criadores de conteúdo receberem doações e apoios de sua comunidade de forma simples, segura e integrada ao Stripe. Ideal para desenvolvedores, streamers, educadores e produtores de conteúdo que desejam monetizar seu trabalho online e criar uma conexão direta com seus apoiadores.',
+    description: 'Givoo é uma plataforma de doações simples, segura e integrada ao Stripe. Ideal para todos, streamers, produtores de conteúdo e vários outros que desejam monetizar seu trabalho online.',
     imageSrc: '/Givoo.png',
     tags: ['Next.js', 'Node.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'Docker'],
     liveUrl: 'https://givoo.vercel.app',
@@ -39,7 +39,7 @@ const projects: ProjectProps[] = [
   },
   {
     title: 'Sistema de Autenticação e Autorização',
-    description: 'Sistema completo de autenticação e autorização construído com NestJS, implementando JWT, OAuth 2.0 e controle de acesso baseado em roles (RBAC) com CASL. Este projeto demonstra uma implementação robusta de autenticação moderna, integrando múltiplos provedores de identidade e um sistema granular de permissões. Ideal para aplicações que necessitam de controle de acesso sofisticado e flexível.',
+    description: 'Sistema completo de autenticação e autorização com controle de acesso baseado em roles (RBAC) com CASL. Este projeto demonstra uma implementação robusta de autenticação moderna, integrando múltiplos provedores de identidade e um sistema granular de permissões.',
     imageSrc: '',
     tags: ['Node.js', 'TypeScript', 'Nest.js', 'JWT', 'Passport.js', 'OAuth 2.0', 'RBAC', 'CASL'],
     liveUrl: '',
