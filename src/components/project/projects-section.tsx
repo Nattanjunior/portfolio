@@ -30,12 +30,12 @@ export interface ProjectProps {
 // Sample project data - replace with your actual projects
 const projects: ProjectProps[] = [
   {
-    title: 'ApoiaDev',
-    description: 'ApoiaDev é uma plataforma moderna para criadores de conteúdo receberem doações e apoios de sua comunidade de forma simples, segura e integrada ao Stripe. Ideal para desenvolvedores, streamers, educadores e produtores de conteúdo que desejam monetizar seu trabalho online e criar uma conexão direta com seus apoiadores.',
-    imageSrc: '/apoiadev.png',
+    title: 'Givoo',
+    description: 'Givoo é uma plataforma moderna para criadores de conteúdo receberem doações e apoios de sua comunidade de forma simples, segura e integrada ao Stripe. Ideal para desenvolvedores, streamers, educadores e produtores de conteúdo que desejam monetizar seu trabalho online e criar uma conexão direta com seus apoiadores.',
+    imageSrc: '/Givoo.png',
     tags: ['Next.js', 'Node.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'Docker'],
-    liveUrl: 'https://apoia-devv.vercel.app',
-    githubUrl: 'https://github.com/Nattanjunior/ApoiaDev',
+    liveUrl: 'https://givoo.vercel.app',
+    githubUrl: 'https://github.com/Nattanjunior/Givoo',
   },
   {
     title: 'Sistema de Autenticação e Autorização',
