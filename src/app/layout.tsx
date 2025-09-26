@@ -52,6 +52,7 @@ export default function RootLayout({
     <html lang="pt-br" className={`scroll-smooth dark ${preahvihear.variable} ${poppins.variable}`}>
       <body
         className={`font-preahvihear antialiased `}
+        suppressHydrationWarning
       >
         <ToasterProvider />
         <AOSProvider>
