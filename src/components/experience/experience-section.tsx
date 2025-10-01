@@ -1,106 +1,77 @@
-import { Card, CardContent } from '@/components/ui/card';
+'use client';
 
-interface ProcessStepProps {
-  number: string;
-  title: string;
+import { Card, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
+
+interface ExperienceProps {
+  company: string;
+  position: string;
+  period: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
 }
 
-const processSteps: ProcessStepProps[] = [
+const experiences: ExperienceProps[] = [
   {
-    number: '01',
-    title: 'Descobrir',
-    description: 'Entendo as necessidades do cliente e os objetivos do negócio para criar soluções sob medida.',
-    icon: (
-      <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M21 21L16.65 16.65" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
-    ),
+    company: 'Google',
+    position: 'Lead Software Engineer',
+    period: 'Oct 2020 - Present',
+    description: 'As a Software Engineer at Google, I provide technical leadership for Google\'s innovative products. I collaborate with cross-functional teams to design scalable solutions for millions of users.',
+    icon: 'google'
   },
   {
-    number: '02',
-    title: 'Definir',
-    description: 'Defino o escopo do projeto, requisitos e métricas de sucesso para garantir alinhamento.',
-    icon: (
-      <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 17L12 22L22 17" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M2 12L12 17L22 12" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
-    ),
+    company: 'Apple',
+    position: 'Junior Software Engineer',
+    period: 'Oct 2018 - Sept 2020',
+    description: 'Working on the iOS team, I helped develop features for iPhone apps. I collaborated with designers to implement intuitive user interfaces and improved app performance.',
+    icon: 'apple'
   },
   {
-    number: '03',
-    title: 'Planejar',
-    description: 'Crio um planejamento detalhado para o desenvolvimento, garantindo performance e segurança.',
-    icon: (
-      <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M3.6001 9H20.4001" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M3.6001 15H20.4001" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M11.5 3C9.81 7.59 9 12.79 9 18" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12.5 3C14.19 7.59 15 12.79 15 18" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
-    ),
-  },
-  {
-    number: '04',
-    title: 'Desenvolver',
-    description: 'Implemento a solução com código limpo e eficiente, otimizando resultados e agregando valor ao negócio.',
-    icon: (
-      <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 9L11 12L8 15" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M16 9L13 12L16 15" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <rect x="3" y="5" width="18" height="14" rx="2" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
-    ),
-  },
+    company: 'Meta',
+    position: 'Software Engineer',
+    period: 'Jan 2016 - Sept 2018',
+    description: 'At Meta, I worked on developing scalable backend solutions for the platform. I designed and implemented APIs and optimized database queries for better performance.',
+    icon: 'meta'
+  }
 ];
 
-function ProcessCard({ step }: { step: ProcessStepProps }) {
+export default function ExperienceSection() {
   return (
-    <Card className="bg-card backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/5">
-      <CardContent className="p-8">
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-6">
-            {step.icon}
-          </div>
-          <div className="mb-2">
-            <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{step.number}</span>
-          </div>
-          <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
-          <p className="text-muted-foreground">{step.description}</p>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-export function ExperienceSection() {
-  return (
-    <section id="process" className="py-20 relative overflow-hidden">
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Como eu trabalho</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Meu processo de desenvolvimento é focado em entender as necessidades do cliente, criar soluções sob medida e garantir performance e segurança. Desde a análise inicial, passando pelo planejamento e desenvolvimento, até a entrega final, busco sempre otimizar resultados e agregar valor ao negócio.
-          </p>
-        </div>
+    <section id="experience" className="py-20 bg-black text-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">EXPERIENCE</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {processSteps.map((step, index) => (
-            <ProcessCard key={index} step={step} />
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div key={index} className="flex flex-col md:flex-row gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+                {exp.icon === 'google' && (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 11V8L17 12L12 16V13H7V11H12Z" fill="currentColor" />
+                  </svg>
+                )}
+                {exp.icon === 'apple' && (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 11V8L17 12L12 16V13H7V11H12Z" fill="currentColor" />
+                  </svg>
+                )}
+                {exp.icon === 'meta' && (
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 11V8L17 12L12 16V13H7V11H12Z" fill="currentColor" />
+                  </svg>
+                )}
+              </div>
+              
+              <Card className="flex-1 bg-gray-900 border-0">
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold">{exp.position} at {exp.company}</h3>
+                    <span className="text-sm text-gray-400">{exp.period}</span>
+                  </div>
+                  <p className="text-gray-300">{exp.description}</p>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

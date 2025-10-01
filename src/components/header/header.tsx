@@ -1,17 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import CardNav from '../CardNav';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
 
 const navItems = [
-  { name: 'Início', href: '#home' },
-  { name: 'Sobre', href: '#about' },
-  { name: 'Tecnologias', href: '#tech' },
-  { name: 'Projetos', href: '#project' },
+  { name: 'Home', href: '#home' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,35 +26,59 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const cardNavItems = [
-    {
-      label: 'Navegação',
-      bgColor: '#16132A',
-      textColor: '#FFFFFF',
-      links: navItems.map((item) => ({
-        label: item.name,
-        href: item.href,
-        ariaLabel: `Ir para ${item.name}`
-      }))
-    }
-  ];
-
   return (
-    <header
-      className={`fixed top-0 w-full z-50`}
-    >
-      <CardNav
-        logo="/logo_N.png"
-        items={cardNavItems}
-        baseColor="#100C2A"
-        menuColor="#E5E7EB"
-        buttonBgColor="#6D28D9"
-        buttonTextColor="#FFFFFF"
-        ctaHref="#contact"
-        ctaLabel="Contato"
-        ctaClassName="hover:opacity-90"
-      />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-60" />
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 bg-transparent ${isScrolled ? 'bg-[#53348B] backdrop-blur-sm border-b border-white/10' : 'bg-transparent'}`}>
+
+      <div className="container mx-auto px-4 py-3 flex justify-between md:justify-center items-center gap-24 relative">
+        <Link href="/" className="flex justify-center items-center">
+          <Image 
+            src="/logo_N.png" 
+            alt="Logo" 
+            width={40}
+            height={40} 
+            className="rounded-full"
+          />
+        </Link>
+        
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex  left-1/2 top-1/2  items-center space-x-8">
+          {navItems.map((item) => (
+            <Link 
+              key={item.name}
+              href={item.href}
+              className="text-sm text-white/80 hover:text-white transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+        
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+              <button className="text-white p-2">
+                <Menu size={20} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-black/90 backdrop-blur-lg border-l border-white/10">
+              <nav className="flex flex-col space-y-8 pt-16">
+                {navItems.map((item) => (
+                  <Link 
+                    key={item.name}
+                    href={item.href}
+                    className="text-white text-2xl text-center hover:text-purple-400 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
     </header>
   );
 }
+     

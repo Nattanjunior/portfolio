@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Code, Layout, Search, Server, Database, Layers } from 'lucide-react';
 
 interface SkillCategoryProps {
   title: string;
@@ -8,42 +9,29 @@ interface SkillCategoryProps {
 
 const skillCategories: SkillCategoryProps[] = [
   {
-    title: 'Criação de Sites',
-    description: 'Transformo suas ideias em um site profissional e atrativo, focado em transmitir sua mensagem de forma clara e eficaz.',
+    title: 'Desenvolvimento Frontend',
+    description: 'Criação de interfaces modernas e responsivas utilizando React, Next.js e outras tecnologias avançadas.',
     icon: (
-      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M2 17L12 22L22 17" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M2 12L12 17L22 12" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+      <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+        <Layout className="text-blue-500" size={24} />
       </div>
     ),
   },
   {
-    title: 'Criação de Landing Pages',
-    description: 'Crio páginas de destino impactantes e otimizadas para converter visitantes em clientes, utilizando técnicas comprovadas de design e persuasão.',
+    title: 'Desenvolvimento Backend',
+    description: 'Construção de APIs robustas e escaláveis com Node.js, Express, NestJS e integração com diversos bancos de dados.',
     icon: (
-      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M9 7H7V17H9V7Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M17 7H15V13H17V7Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+      <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+        <Server className="text-blue-500" size={24} />
       </div>
     ),
   },
   {
-    title: 'Otimização de SEO',
-    description: 'Maximizo a visibilidade do seu site nos mecanismos de busca, implementando estratégias avançadas de SEO para aumentar o tráfego orgânico e melhorar seu ranking.',
+    title: 'Banco de Dados',
+    description: 'Modelagem e otimização de bancos de dados relacionais e NoSQL, com foco em performance e segurança.',
     icon: (
-      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M21 21L16.65 16.65" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M11 8V14" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8 11H14" stroke="#7B4AE2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+      <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+        <Database className="text-blue-500" size={24} />
       </div>
     ),
   },
