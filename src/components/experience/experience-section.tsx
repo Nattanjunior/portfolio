@@ -89,9 +89,6 @@ function ProcessCard({ step }: { step: ProcessStepProps }) {
 export function ExperienceSection() {
   return (
     <section id="process" className="py-20 relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute top-1/3 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-0 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 text-center">
