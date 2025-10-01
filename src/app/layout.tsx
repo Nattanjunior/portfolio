@@ -1,29 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Preahvihear, Poppins} from "next/font/google";
+import { Preahvihear, Poppins } from "next/font/google";
 import "./globals.css";
 
 import { ToasterProvider } from "@/components/providers/toaster-provider";
 import { AOSProvider } from "@/components/providers/AOSprovider";
+// import HyperspeedGlobal from "./wrapper/HyperSpeedGlobal";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+// Otimização de fontes com display: swap para melhor CLS
 const preahvihear = Preahvihear({
   subsets: ["latin"],
-  weight: ["400"], 
+  weight: ["400"],
   variable: "--font-preahvihear",
+  display: "swap",
 });
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], 
+  weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -50,14 +45,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={`scroll-smooth dark ${preahvihear.variable} ${poppins.variable}`}>
+      <head>
+        {/* Preload critical resources */}
+        <link 
+          rel="preconnect" 
+          href="https://fonts.googleapis.com" 
+        />
+        <link 
+          rel="preconnect" 
+          href="https://fonts.gstatic.com" 
+          crossOrigin="anonymous" 
+        />
+        {/* Preload critical CSS */}
+        <link 
+          rel="preload" 
+          href="/styles/critical.css" 
+          as="style" 
+        />
+        {/* Add meta for better mobile experience */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body
-        className={`font-preahvihear antialiased `}
+        className={`font-preahvihear antialiased`}
         suppressHydrationWarning
       >
         <ToasterProvider />
         <AOSProvider>
           {children}
-        </AOSProvider >
+        </AOSProvider>
       </body>
     </html>
   );
