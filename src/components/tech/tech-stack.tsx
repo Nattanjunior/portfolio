@@ -28,10 +28,8 @@ const techIcons: TechIconProps[] = [
   { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
   { name: 'Jest', icon: 'https://skillicons.dev/icons?i=jest' },
   { name: 'React', icon: 'https://skillicons.dev/icons?i=react' },
-  { name: 'TanStack Query', icon: 'https://tanstack.com/assets/logo-color-100w-br5_Ikqp.png' },
   { name: 'Next.js', icon: 'https://skillicons.dev/icons?i=nextjs' },
   { name: 'TailwindCSS', icon: 'https://skillicons.dev/icons?i=tailwindcss' },
-  // { name: 'Zustand', icon: 'Zustand' },
   { name: 'HTML', icon: 'https://skillicons.dev/icons?i=html' },
   { name: 'CSS', icon: 'https://skillicons.dev/icons?i=css' },
 ];
@@ -39,10 +37,10 @@ const techIcons: TechIconProps[] = [
 function TechIcon({ name, icon }: TechIconProps) {
   return (
     <div className="flex flex-col items-center justify-center mx-4 group">
-      <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-2 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-primary/10 group-hover:scale-110">
-        <img src={icon} alt={name} className="w-8 h-8 md:w-10 md:h-10" />
+      <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-xl bg-purple-900/20 backdrop-blur-md border border-purple-900/30 shadow-lg mb-3 transition-all duration-300 group-hover:bg-purple-900/30 group-hover:border-purple-900/50 group-hover:shadow-purple-900/20 group-hover:translate-y-[-5px]">
+        <img src={icon} alt={name} className="w-8 h-8 md:w-10 md:h-10 transition-all duration-300 group-hover:scale-110" />
       </div>
-      <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors duration-300">{name}</span>
+      <span className="text-sm md:text-base font-medium text-white/80 group-hover:text-white transition-all duration-300">{name}</span>
     </div>
   );
 }
@@ -81,10 +79,6 @@ export function TechStack() {
       </div>
 
       <div className="relative">
-        {/* Gradientes nas bordas para efeito de fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10"></div>
-
         <Marquee className="py-4" pauseOnHover={true}>
           {techIcons.slice(0, Math.ceil(techIcons.length / 2)).map((tech, index) => (
             <div key={index} className="tech-icon">
