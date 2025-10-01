@@ -78,10 +78,6 @@ function SkillCategory({ category }: { category: SkillCategoryProps }) {
 export function SkillsSection() {
   return (
     <section id="about" className="py-20 relative overflow-hidden font-poppins">
-      {/* Background gradients */}
-      <div className="absolute top-1/4 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-semibold mb-4 font-poppins">O que eu faço?</h2>
