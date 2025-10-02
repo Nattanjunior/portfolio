@@ -5,6 +5,15 @@ import Link from 'next/link';
 import { ArrowRight, Github, Linkedin } from 'lucide-react';
 
 export function HeroSection() {
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Nataniel_Junior.pdf';
+    link.download = 'Nataniel_Junior.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="bg-black text-white min-h-screen flex items-center justify-center pt-16">
       <div className="container mx-auto px-4">
@@ -31,21 +40,26 @@ export function HeroSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button className="bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-md flex items-center gap-2">
-              Get In Touch
-              <ArrowRight size={16} />
-            </Button>
+            <Link href="#contact">
+              <Button className="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-full flex items-center gap-2 transition-transform transform hover:scale-105">
+                Get In Touch
+                <ArrowRight size={16} />
+              </Button>
+            </Link>
             
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-6 py-2 rounded-md">
+            <Button 
+              className="border-white border-2 bg-transparent text-white px-4 py-3 rounded-full transition-transform transform hover:scale-105 hover:bg-transparent"
+              onClick={handleDownloadCV}
+            >
               Download CV
             </Button>
           </div>
           
           <div className="flex gap-4">
-            <Link href="https://github.com" className="text-white hover:text-pink-500 transition-colors">
+            <Link href="https://github.com/Nattanjunior" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-500 transition-colors">
               <Github size={24} />
             </Link>
-            <Link href="https://linkedin.com" className="text-white hover:text-pink-500 transition-colors">
+            <Link href="https://www.linkedin.com/in/nattanjunior" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-500 transition-colors">
               <Linkedin size={24} />
             </Link>
           </div>
