@@ -47,7 +47,7 @@ export default function ContactSection() {
           </form>
           
           <div className="mt-12 text-center">
-            <p className="text-gray-400">Email: example@email.com</p>
+            <p className="text-gray-400">Email: fnatanieljunior@email.com</p>
           </div>
         </div>
       </div>
