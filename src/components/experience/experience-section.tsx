@@ -1,78 +1,64 @@
 'use client';
 
-import { Card, CardContent } from '@/components/ui/card';
+import { Marquee } from '@/components/magicui/marquee';
 import Image from 'next/image';
 
-interface ExperienceProps {
-  company: string;
-  position: string;
-  period: string;
-  description: string;
+interface TechIconProps {
+  name: string;
   icon: string;
 }
 
-const experiences: ExperienceProps[] = [
-  {
-    company: 'Google',
-    position: 'Lead Software Engineer',
-    period: 'Oct 2020 - Present',
-    description: 'As a Software Engineer at Google, I provide technical leadership for Google\'s innovative products. I collaborate with cross-functional teams to design scalable solutions for millions of users.',
-    icon: 'google'
-  },
-  {
-    company: 'Apple',
-    position: 'Junior Software Engineer',
-    period: 'Oct 2018 - Sept 2020',
-    description: 'Working on the iOS team, I helped develop features for iPhone apps. I collaborated with designers to implement intuitive user interfaces and improved app performance.',
-    icon: 'apple'
-  },
-  {
-    company: 'Meta',
-    position: 'Software Engineer',
-    period: 'Jan 2016 - Sept 2018',
-    description: 'At Meta, I worked on developing scalable backend solutions for the platform. I designed and implemented APIs and optimized database queries for better performance.',
-    icon: 'meta'
-  }
+// Using the same list of technologies from the old tech-stack component
+const techIcons: TechIconProps[] = [
+  { name: 'Node.js', icon: 'https://skillicons.dev/icons?i=nodejs' },
+  { name: 'TypeScript', icon: 'https://skillicons.dev/icons?i=ts' },
+  { name: 'NestJS', icon: 'https://skillicons.dev/icons?i=nestjs' },
+  { name: 'Express', icon: 'https://skillicons.dev/icons?i=express' },
+  { name: 'Fastify', icon: 'https://fastify.dev/img/logos/fastify-white.svg' },
+  { name: 'Prisma', icon: 'https://skillicons.dev/icons?i=prisma' },
+  { name: 'PostgreSQL', icon: 'https://skillicons.dev/icons?i=postgres' },
+  { name: 'MongoDB', icon: 'https://skillicons.dev/icons?i=mongodb' },
+  { name: 'Redis', icon: 'https://skillicons.dev/icons?i=redis' },
+  { name: 'Docker', icon: 'https://skillicons.dev/icons?i=docker' },
+  { name: 'AI', icon: 'https://skillicons.dev/icons?i=ai' },
+  { name: 'JavaScript', icon: 'https://skillicons.dev/icons?i=js' },
+  { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
+  { name: 'Jest', icon: 'https://skillicons.dev/icons?i=jest' },
+  { name: 'React', icon: 'https://skillicons.dev/icons?i=react' },
+  { name: 'Next.js', icon: 'https://skillicons.dev/icons?i=nextjs' },
+  { name: 'TailwindCSS', icon: 'https://skillicons.dev/icons?i=tailwindcss' },
+  { name: 'HTML', icon: 'https://skillicons.dev/icons?i=html' },
+  { name: 'CSS', icon: 'https://skillicons.dev/icons?i=css' }
 ];
+
+function TechIcon({ icon, name }: TechIconProps) {
+  return (
+    <div className="flex items-center justify-center mx-8" title={name}>
+     <Image
+        src={icon} 
+        alt={name} 
+        className="w-12 h-12 transition-all duration-300 filter grayscale hover:filter-none hover:scale-110"
+        width={48}
+        height={48}
+      />
+    </div>
+  );
+}
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">EXPERIENCE</h2>
+    <section id="experience" className="py-20 bg-black">
+      <div className="container mx-auto px-4 text-center">
+        <h3 className="text-lg font-semibold text-white/50 tracking-[0.2em] uppercase mb-12">
+          Experience With
+        </h3>
         
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="flex flex-col md:flex-row gap-4 items-start">
-              <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
-                {exp.icon === 'google' && (
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 11V8L17 12L12 16V13H7V11H12Z" fill="currentColor" />
-                  </svg>
-                )}
-                {exp.icon === 'apple' && (
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 11V8L17 12L12 16V13H7V11H12Z" fill="currentColor" />
-                  </svg>
-                )}
-                {exp.icon === 'meta' && (
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 11V8L17 12L12 16V13H7V11H12Z" fill="currentColor" />
-                  </svg>
-                )}
-              </div>
-              
-              <Card className="flex-1 bg-gray-900 border-0">
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold">{exp.position} at {exp.company}</h3>
-                    <span className="text-sm text-gray-400">{exp.period}</span>
-                  </div>
-                  <p className="text-gray-300">{exp.description}</p>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
+        <div className="relative flex items-center justify-center">
+          <Marquee pauseOnHover className="[--gap:1rem]">
+            {techIcons.map((tech) => (
+              <TechIcon key={tech.name} name={tech.name} icon={tech.icon} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>
