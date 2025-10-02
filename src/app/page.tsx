@@ -33,18 +33,18 @@ export default function Home() {
       <main className="bg-black text-white">
         <HeroSection />
         <Suspense fallback={
-          <div className="min-h-[400px] flex items-center justify-center">
+          <div className="min-h-[200px] flex items-center justify-center">
             <div className="animate-pulse w-12 h-12 rounded-full bg-gradient-to-r from-gray-800 to-gray-700"></div>
           </div>
         }>
-          <ProjectsSection />
+          <ExperienceSection />
         </Suspense>
         <Suspense fallback={
           <div className="min-h-[400px] flex items-center justify-center">
             <div className="animate-pulse w-12 h-12 rounded-full bg-gradient-to-r from-gray-800 to-gray-700"></div>
           </div>
         }>
-          {/* <ExperienceSection /> */}
+          <ProjectsSection />
         </Suspense>
         <Suspense fallback={
           <div className="min-h-[400px] flex items-center justify-center">
